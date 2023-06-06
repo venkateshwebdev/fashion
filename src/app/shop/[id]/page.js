@@ -14,7 +14,7 @@ const productPage = ({params,searchParams}) => {
             <h1>{cont}</h1>
             <h1>{id}</h1> */}
             <div className={styles.productImage}>
-            <Image className={styles.sarada} src={`https://static.nike.com/a/images/t_default/${id}/${cont}.png`} width={500} height={500}/>
+            <img className={styles.sarada} src={`https://static.nike.com/a/images/t_default/${id}/${cont}.png`} alt="img"/>
             </div>
             <div className={styles.content}>
                 <div className={styles.title}>{searchParams.t}</div>

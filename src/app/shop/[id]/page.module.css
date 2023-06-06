@@ -1,6 +1,5 @@
 .productImage{
     position: relative;
-    top:10%;
     animation: cycle 0.4s ease  ;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
@@ -45,8 +44,8 @@
     box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.263);
 }
 .sarada{
-    /* filter: drop-shadow(1px 1px 10px black); */
-
+    width: 500px;
+    height: 500px;
 }
 @keyframes cycle {
     0%{left:20%}
@@ -80,9 +79,14 @@
 @media screen and (max-width:800px) {
     .container{
         flex-direction: column;
+        margin: 0 2%;
     }
     .content{
-        width: 100%;
+        width: 80%;
+    }
+    .sarada{
+        width: 400px;
+        height: 400px;
     }
     
 }
