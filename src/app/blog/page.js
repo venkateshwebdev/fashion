@@ -19,11 +19,11 @@ const Blog = async() => {
         <h3>Our Recent Blogs About Fashion.</h3>
         {/* <Button /> */}
         {data?.map((e)=>
-        <Link href={`/blog/${e.id}`}>
+        <Link href={`/blog/${e.id}`} key={e.id}>
             <div className={styles.blogContainer}>
                 <h4>{e.id}.</h4>
                 <div style={{width:"70%"}}><h3>{e.title}</h3><p>{e.body}</p></div>
-                <img src={e.url} height={"200px"} width={"200px"} />
+                <Image src={e.url} height={200} width={200} alt="image"/>
             </div>
             </Link>
         )}

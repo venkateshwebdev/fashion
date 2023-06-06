@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="navbar-container">
             <div className="navbar-title">Fashion-ed.</div>
             <div className="navbar-links">
-                {jsObj.map((e)=><Link href={e.url}>{e.name}</Link>)}
+                {jsObj.map((e,i)=><Link href={e.url} key={i}>{e.name}</Link>)}
             </div>
         </div>
      );

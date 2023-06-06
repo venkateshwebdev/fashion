@@ -6,7 +6,7 @@ const ShopCard = ({data}) => {
     return (
         <Link href={`shop/${image+idata}?t=${data.title}&p=${data.price.currentPrice}`}>
         <div className="shop-card-container">
-            <div className="shop-card-image"><Image src={data.images.squarishURL} width={300} height={300} /></div>
+            <div className="shop-card-image"><Image src={data.images.squarishURL} alt="image" width={300} height={300} /></div>
             <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
             <h4>{data.title}</h4>
             <p style={{fontSize:"14px"}}>{data.subtitle}</p>

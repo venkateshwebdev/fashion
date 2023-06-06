@@ -7,7 +7,7 @@ export default function Home() {
    <div className={styles.container}>
     <div className={styles.heroContent}>
       <div>Hello ,</div>
-      <div className={styles.title}>Let's get Fashion-ed .</div>
+      <div className={styles.title}>Let &apos;s get Fashion-ed .</div>
       <p className={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     {/* <div className={styles.heroImage}><Image src={hero} height={400} width={400} /></div> */}
