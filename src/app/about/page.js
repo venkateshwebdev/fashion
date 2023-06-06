@@ -15,7 +15,6 @@ const AboutPage = () => {
     return (
         <>
         <div>HEllo</div>
-
         </>
     );
 }

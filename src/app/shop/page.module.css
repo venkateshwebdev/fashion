@@ -5,3 +5,8 @@
     place-items: center;
     row-gap: 30px;
 }
+@media screen and (max-width:800px) {
+    .shopContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
