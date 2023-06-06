@@ -24,7 +24,7 @@
 }
 .underline{
     width: 80%;
-    margin: 10%;
+    margin: 0 10%;
     border: none;
     border-bottom: 3px solid rgba(128, 128, 128, 0.232);
 }
@@ -80,6 +80,9 @@
     .container{
         flex-direction: column;
         margin-bottom: 10%;
+    }
+    .underline{
+        margin: 10%;
     }
     .content{
         width: 80%;
