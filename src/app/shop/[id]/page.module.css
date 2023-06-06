@@ -24,7 +24,7 @@
 }
 .underline{
     width: 80%;
-    margin: 3% 10%;
+    margin: 10%;
     border: none;
     border-bottom: 3px solid rgba(128, 128, 128, 0.232);
 }
@@ -79,7 +79,7 @@
 @media screen and (max-width:800px) {
     .container{
         flex-direction: column;
-        margin: 0 2%;
+        margin-bottom: 10%;
     }
     .content{
         width: 80%;
@@ -87,6 +87,9 @@
     .sarada{
         width: 400px;
         height: 400px;
+    }
+    .title{
+        font-size: 32px;
     }
     
 }
