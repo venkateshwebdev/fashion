@@ -11,7 +11,7 @@ export default function Home() {
       <p className={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     {/* <div className={styles.heroImage}><Image src={hero} height={400} width={400} /></div> */}
-        <div className={styles.heroImage}><img src={"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"} /></div>
+        <div className={styles.heroImage}><img src={"https://th.bing.com/th/id/OIG.GE.klpyB2Bf0vH.CHaQY?pid=ImgGn"} /></div>
     
    </div>
   )

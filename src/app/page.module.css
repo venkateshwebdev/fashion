@@ -29,6 +29,8 @@
 }
 .heroImage > img{
     border-radius: 36px;
+    width: 500px;
+    height: 500px;
 }
 @keyframes image {
     0% {
@@ -81,5 +83,9 @@
     }
     .title{
         font-size: 70px;
+    }
+    .heroImage > img{
+        width: 400px;
+        height: 400px;
     }
 }
