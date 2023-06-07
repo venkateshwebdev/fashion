@@ -1,7 +1,7 @@
 html{
   max-width: 100vw;
-  background-color: #252525;
-  color:#eeeeed;
+  background-color: #eeeeed;
+  color:#252525;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
