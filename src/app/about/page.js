@@ -1,6 +1,6 @@
 // "use client"
 import Image from "next/image";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import imageData from "@/Components/aboutData";
 import styles from './page.module.css'
 const AboutPage = () => {
