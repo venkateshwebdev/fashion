@@ -14,7 +14,7 @@ const AboutPage = () => {
         <div className={styles.quote}>
         <p>&quot;</p>
         <div>Fashion Fades, Styles Eternal</div>
-        <span>- Lorem Ipsum dearmit. "</span>
+        <span>- Lorem Ipsum dearmit. &quot;</span>
         </div>
         </div>
 
