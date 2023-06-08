@@ -5,7 +5,7 @@ const Navbar = () => {
     return ( 
         <div className="navbar-container">
             <div className="navbar-title">Fashion-ed.</div>
-            <button>mode</button>
+            {/* <button>mode</button> */}
             <div className="navbar-links">
                 {jsObj.map((e,i)=><Link href={e.url} key={i}>{e.name}</Link>)}
             </div>
