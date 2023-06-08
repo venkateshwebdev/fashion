@@ -1,5 +1,8 @@
+// "use client"
+import { useContext } from 'react'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+import ThemeProvider, { ThemeContext } from './context/ThemeContext'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -13,11 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <ThemeProvider>
       <body className={inter.className}>
         <Navbar />
         {children}
         <Footer />
         </body>
+        </ThemeProvider>
     </html>
   )
 }

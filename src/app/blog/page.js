@@ -16,14 +16,14 @@ const Blog = async() => {
     console.log("Blog rendered")
     return (
         <>
-        <h3>Our Recent Blogs About Fashion.</h3>
+        <div className={styles.heading}>Our Recent Blogs About Fashion.</div>
         {/* <Button /> */}
         {data?.map((e)=>
         <Link href={`/blog/${e.id}`} key={e.id}>
             <div className={styles.blogContainer}>
                 <h4>{e.id}.</h4>
                 <div style={{width:"70%"}}><h3>{e.title}</h3><p>{e.body}</p></div>
-                <Image src={e.url} height={200} width={200} alt="image"/>
+                {/* <Image src={e.url} height={200} width={200} alt="image"/> */}
             </div>
             </Link>
         )}

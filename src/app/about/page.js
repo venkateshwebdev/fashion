@@ -1,21 +1,24 @@
 "use client"
+import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import imageData from "@/Components/aboutData";
+import styles from './page.module.css'
 const AboutPage = () => {
-    const [data,setData] = useState()
-    useEffect(()=>{
-        getData()
-    },[])
-    const getData = async()=>{
-        const rawData = await fetch("./api/test")
-        // const data = await rawData.json()
-        setData(rawData)
-        console.log(rawData)
-    }
     return (
-        <>
-        <div>HEllo</div>
-        </>
+        <div className={styles.container}>
+        <div className={styles.heading}>Our Fashio Infulencers.</div>
+        <div className={styles.cont}>
+        <div className={styles.content}>
+        <div className={styles.imageContent}>{imageData.map((e)=><div className={styles.dive} key={e.id}><Image src={e.url} width={550} height={550} /></div>)}</div>
+        </div>
+        <div className={styles.quote}>
+        <p>"</p>
+        <div>Fashion Fades, Styles Eternal</div>
+        <span>- Lorem Ipsum dearmit. "</span>
+        </div>
+        </div>
+
+        </div>
     );
 }
  

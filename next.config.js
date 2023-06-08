@@ -4,7 +4,8 @@ const nextConfig = {
         domains:[
             "png.pngtree.com",
             "static.nike.com",
-            "images.unsplash.com"
+            "images.unsplash.com",
+            "th.bing.com"
         ]
     }
 }

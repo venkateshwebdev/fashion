@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* font-family: 'Cedarville Cursive', cursive; */
+}
+.imageContent{
+    display: flex;
+    position: relative;
+    /* left: -550px; */
+    animation: cycle 60s ease infinite;
+}
+.heading{
+    text-decoration: underline gray;
+    font-size: 18px;
+}
+.content{
+    overflow: hidden;
+    height: 550px;
+    width: 550px;
+    overflow: hidden;
+    background-color: red;
+    border-radius: 30px;
+    /* flex: 1; */
+}
+.cont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+.quote{
+    font-size: 95px;
+    /* width: 60%; */
+    flex: 1;
+    margin-left: 10%;
+    font-family: 'Cedarville Cursive', cursive;
+}
+.quote > p{
+    position: absolute;
+    left: 45%;
+    font-size: 108px;
+}
+.quote > div{
+    border: none;
+    padding-bottom: 20px;
+    border-bottom: 2px solid lightgray;
+}
+.quote > span{
+    padding-top: 20px;
+    position: absolute;
+    font-size: 20px;
+    text-align: right;
+    right:10%;
+    color: gray;
+}
+@keyframes cycle {
+    0%{left: 0;}
+    5%{left:0}
+    10%{left:-550px}
+    15%{left:-1100px}
+    20%{left:-1650px}
+    25%{left:-2200px}
+    30%{left:-2750px}
+    35%{left:-3300px}
+    40%{left:-3850px}
+    45%{left:-4400px}
+    50%{left:-4950px}
+    55%{left:-5500px}
+    60%{left:-6050px}
+    65%{left:-6600px}
+    70%{left:-7150px}
+    75%{left:-7700px}
+    80%{left:-8250px}
+    85%{left:-8800px}
+    90%{left:-9350px}
+    95%{left:0px}
+    100%{left:0px}
+
+}
+@media screen and (max-width:800px) {
+    .cont{
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+        height: 500px;
+    }
+    .quote{
+        padding-top: 50px;
+        font-size: 32px;
+    }
+    .quote > p{
+        left: 10%;
+        font-size: 40px;
+    }
+}
