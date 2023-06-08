@@ -5,7 +5,8 @@ const nextConfig = {
             "png.pngtree.com",
             "static.nike.com",
             "images.unsplash.com",
-            "th.bing.com"
+            "th.bing.com",
+            "media.chicmi.com"
         ]
     }
 }
