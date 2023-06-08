@@ -21,7 +21,7 @@
     height: 550px;
     width: 550px;
     overflow: hidden;
-    background-color: red;
+    /* background-color: red; */
     border-radius: 30px;
     /* flex: 1; */
 }
