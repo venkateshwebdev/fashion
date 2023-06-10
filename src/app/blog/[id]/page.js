@@ -1,7 +1,8 @@
 "use client"
+import Image from "next/image"
 import styles from "./page.module.css"
 import useSWR from 'swr'
-export default function blogpage({params}){
+export default function Blogpage({params}){
     const id = params.id
     const fetcher= async(url)=>{
         const response = await fetch(url);
