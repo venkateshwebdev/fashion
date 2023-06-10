@@ -13,7 +13,7 @@ const Blog = () => {
         getData()
     },[])
     const getData = async()=>{
-        const data = await fetch("http://localhost:3000/api/blog")
+        const data = await fetch("/api/blog")
         const full = await data.json()
         console.log(full)
         setData(full)
