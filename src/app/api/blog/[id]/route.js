@@ -1,9 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import mongoose from "mongoose";
 
-export const GET = async(request,{params})=>{
-    const {id} = params
-    console.log(id)
-    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=25&max_results=25/';
+export async function GET(req,{params}){
+    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=30&max_results=25';
     const options = {
         method: 'GET',
         headers: {
@@ -11,9 +9,10 @@ export const GET = async(request,{params})=>{
             'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
         }
     };
-    const rawData = await fetch(url,options)
-    const orgData = await rawData.json()
-    const data = orgData.values.events.map((e,i)=>Object.assign(e))
-    const sendData=data.filter((e)=>e.event_id==id)
-    return new NextResponse(JSON.stringify(sendData))
+    const rawData = await fetch(url,options);
+    const resData = await rawData.json()
+    const data = resData?.values.events.map((e)=>e)
+    const sendData = data.filter((e)=>e.event_id==params.id)
+    console.log(sendData)
+    return new Response(JSON.stringify(sendData),{status:200})
 }

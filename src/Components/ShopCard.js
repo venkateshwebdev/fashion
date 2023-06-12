@@ -3,6 +3,7 @@ import Link from "next/link";
 const ShopCard = ({data}) => {
     const image = data.images.squarishURL.slice(43,79)
     const idata = data.images.squarishURL.slice(80,-4)
+    // console.log(data)
     return (
         <Link href={`shop/${image+idata}?t=${data.title}&p=${data.price.currentPrice}`}>
         <div className="shop-card-container">

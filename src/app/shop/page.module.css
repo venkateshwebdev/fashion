@@ -5,6 +5,42 @@
     place-items: center;
     row-gap: 30px;
 }
+.buttonCont{
+    padding-top: 10px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonList{
+    display: flex;
+    flex-direction: column;
+    padding: 0 4%;
+}
+.heading{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+.buttonList >div{
+    padding: 5px;
+    cursor: pointer;
+}
+.buttonList >div:hover{
+    background-color: rgba(211, 211, 211, 0.175);
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cats{
+    display: flex;
+}
+.categoriesList{
+    display: none;
+}
 @media screen and (max-width:800px) {
     .shopContainer{
         grid-template-columns: repeat(1,1fr);

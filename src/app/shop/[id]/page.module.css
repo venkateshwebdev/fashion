@@ -46,6 +46,7 @@
 .sarada{
     width: 500px;
     height: 500px;
+    /* filter: drop-shadow(3px 3px rgba(254, 4, 4, 0.89)); */
 }
 @keyframes cycle {
     0%{left:20%}

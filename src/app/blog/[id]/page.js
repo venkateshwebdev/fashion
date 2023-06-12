@@ -2,29 +2,32 @@
 import Image from "next/image"
 import styles from "./page.module.css"
 import useSWR from 'swr'
+import { useState } from "react"
 export default function Blogpage({params}){
     const id = params.id
+    console.log(id)
+    const url =`/api/blog/${id}`
     const fetcher= async(url)=>{
         const response = await fetch(url);
         return response.json()
     }
-    const url = `/api/blog/${id}`
     const {data,error} = useSWR(url,fetcher)
-    const d = data?.[0]
-    console.log(d)
+    console.log(data)
+    const datad = data?.[0]
     return(
         <div className={styles.container}>
             <div className={styles.imagec}>
-            {/* <div className={styles.logo}><img src={`https://media.chicmi.com/${searchParams.l}-logo.jpg`} alt="img" /></div> */}
-            <img src={d?.event_hero_url} alt="img" />
+            <img src={datad?.event_hero_url} alt="img" />
             </div>
             <div className={styles.content}>
-            <h2>{d?.address_business_name}</h2>
-            <div className={styles.logocontent}><h2>{d?.event_name_en}</h2></div>
-            <h5>{d?.event_name}</h5>
-            <div><p>{d?.summary_en}</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid?.data?t non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid?.data?t non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-            {/* <div>Full details at <link to={d?.detail_url}>{d?.detail_url}</link></div> */}
+            <h2>{datad?.address_business_name}</h2>
+            <div className={styles.logocontent}><h2>{datad?.event_name}</h2></div>
+            <h5>{datad?.event_name}</h5>
+            <div><p>{datad?.summary}</p></div>
+            <h5>at {datad?.location}</h5>
+            <div>Full details at <a style={{color:"blue",textDecoration:"underline"}} href={datad?.detail_url}>{datad?.detail_url}</a></div>
             </div>
+            {/* hey */}
         </div>
     )
 }
