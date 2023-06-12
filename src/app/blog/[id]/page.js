@@ -22,7 +22,7 @@ export default function Blogpage({params}){
             <div className={styles.content}>
             <h2>{datad?.address_business_name}</h2>
             <div className={styles.logocontent}><h2>{datad?.event_name}</h2></div>
-            <h5>{datad?.event_name}</h5>
+            <h5>{datad?.headliner_copy}</h5>
             <div><p>{datad?.summary}</p></div>
             <h5>at {datad?.location}</h5>
             <div>Full details at <a style={{color:"blue",textDecoration:"underline"}} href={datad?.detail_url}>{datad?.detail_url}</a></div>

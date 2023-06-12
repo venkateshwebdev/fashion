@@ -25,6 +25,7 @@ const Blog = () => {
         setImage("")
         setMainCopy("")
         setTitle("")
+        setform(true)
     }
     const url = "/api/blog"
     const fetcher= async(url)=>{

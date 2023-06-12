@@ -1,6 +1,10 @@
+import Blog from "@/model/blogSchema";
+import db from "@/utils/conectMongo";
 import mongoose from "mongoose";
 
 export async function GET(req,{params}){
+    await db.connect()
+    const ownData = await Blog.find()
     const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=30&max_results=25';
     const options = {
         method: 'GET',
@@ -12,7 +16,8 @@ export async function GET(req,{params}){
     const rawData = await fetch(url,options);
     const resData = await rawData.json()
     const data = resData?.values.events.map((e)=>e)
-    const sendData = data.filter((e)=>e.event_id==params.id)
+    const allData = [...ownData,...data]
+    const sendData = allData.filter((e)=>e.event_id==params.id||e.event_id===parseInt(params.id))
     console.log(sendData)
     return new Response(JSON.stringify(sendData),{status:200})
 }

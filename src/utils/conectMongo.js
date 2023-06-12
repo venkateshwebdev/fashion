@@ -16,10 +16,7 @@ async function connect() {
         }
         await mongoose.disconnect();
     }
-    const db = await mongoose.connect(mongoUrl,{
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true});
+    const db = await mongoose.connect(mongoUrl)
     connection.isConnected = db.connections[0].readyState;
 }
 
