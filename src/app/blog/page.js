@@ -21,6 +21,10 @@ const Blog = () => {
         }
         const sentData = await fetch('/api/blog',{method:'POST',headers: { 'Content-Type': 'application/json' },body:JSON.stringify(bodyData)})
         console.log(image,title,mainCopy,event)
+        setEvent("")
+        setImage("")
+        setMainCopy("")
+        setTitle("")
     }
     const url = "/api/blog"
     const fetcher= async(url)=>{
@@ -40,7 +44,7 @@ const Blog = () => {
             <input type="text" onChange={(e)=>setEvent(e.target.value)} value={event} placeholder="event name" />
             <input type="text" onChange={(e)=>setMainCopy(e.target.value)} value={mainCopy} placeholder="HeadLine" />
             <input type="text" onChange={(e)=>setImage(e.target.value)} value={image} placeholder="image url" />
-            <button>S e n d</button>
+            <button>Send</button>
             </form>
             </div>
         </div>
