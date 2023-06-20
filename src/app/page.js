@@ -8,7 +8,7 @@ export default function Home() {
     <div className={styles.heroContent}>
       <div>Hello ,</div>
       <div className={styles.title}>Let &apos;s get Fashion-ed .</div>
-      <p className={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p className={styles.p}>Welcome to our Fashion Haven: Unleash Your Style, Empower Others, and Explore Endless Fashion Possibilities!</p>
       </div>
     {/* <div className={styles.heroImage}><Image src={hero} height={400} width={400} /></div> */}
         <div className={styles.heroImage}><img src={"https://th.bing.com/th/id/OIG.GE.klpyB2Bf0vH.CHaQY?pid=ImgGn"} /></div>

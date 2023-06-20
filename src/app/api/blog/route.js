@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 export async function GET(req){
     await db.connect()
     const ownData = await Blog.find()
-    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=30&max_results=25';
+    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=5&max_results=5';
     const options = {
         method: 'GET',
         headers: {
@@ -15,7 +15,7 @@ export async function GET(req){
     const rawData = await fetch(url,options);
     const resData = await rawData.json()
     const data = resData?.values.events.map((e)=>e)
-    const sendData = [...ownData,...data]
+    const sendData = [...ownData.reverse(),...data]
     return new Response(JSON.stringify(sendData),{status:200})
 }
 

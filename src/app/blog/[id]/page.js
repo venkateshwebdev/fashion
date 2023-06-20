@@ -27,6 +27,7 @@ export default function Blogpage({params}){
             <h5>at {datad?.location}</h5>
             <div>Full details at <a style={{color:"blue",textDecoration:"underline"}} href={datad?.detail_url}>{datad?.detail_url}</a></div>
             </div>
+            {/* <button>Delete Blog</button> */}
             {/* hey */}
         </div>
     )

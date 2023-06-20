@@ -11,7 +11,8 @@ const nextConfig = {
             "images.unsplash.com",
             "th.bing.com",
             "media.chicmi.com",
-            "assets.ajio.com"
+            "assets.ajio.com",
+            "plus.unsplash.com"
         ]
     },
     webpack(config) {

@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 export async function GET(req,{params}){
     await db.connect()
     const ownData = await Blog.find()
-    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=30&max_results=25';
+    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=5&max_results=5';
     const options = {
         method: 'GET',
         headers: {

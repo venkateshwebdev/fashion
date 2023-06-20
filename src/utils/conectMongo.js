@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
 
-const mongoUrl="mongodb://localhost:27017/fashion"
+const mongoUrl="mongodb+srv://nikhilsirigineedi3:nikhil123@cluster0.x6lw4qo.mongodb.net/?retryWrites=true&w=majority"
 const connection = {};
-
 
 
 async function connect() {

@@ -10,6 +10,7 @@ const Blog = () => {
     const [title,setTitle] = useState("")
     const [event,setEvent] = useState("")
     const [mainCopy,setMainCopy] = useState("")
+    const [message,setMessage] = useState("")
 
     const handleSubmit =async(e)=>{
         e.preventDefault();
@@ -19,20 +20,29 @@ const Blog = () => {
             mainCopy,
             image
         }
-        const sentData = await fetch('/api/blog',{method:'POST',headers: { 'Content-Type': 'application/json' },body:JSON.stringify(bodyData)})
-        console.log(image,title,mainCopy,event)
-        setEvent("")
-        setImage("")
-        setMainCopy("")
-        setTitle("")
-        setform(true)
+        if(title==""||title==" "||image==""||image==" "){
+         setMessage("title and image are must")   
+        }
+        else{
+            const sentData = await fetch('/api/blog',{method:'POST',headers: { 'Content-Type': 'application/json' },body:JSON.stringify(bodyData)})
+            console.log(image,title,mainCopy,event)
+            mutate(data)
+            setEvent("")
+            setImage("")
+            setMainCopy("")
+            setTitle("")
+            setform(true)
+        }
+
     }
     const url = "/api/blog"
     const fetcher= async(url)=>{
+        console.log("i am running")
         const response = await fetch(url);
         return response.json()
+        
     }
-    const {data,error} = useSWR(url,fetcher)
+    const {data,error,mutate} = useSWR(url,fetcher)
     // console.log(data)
     return (
         <div>
@@ -40,6 +50,7 @@ const Blog = () => {
         <div className={styles.formEnable} onClick={()=>setform(prev=>!prev)}>Want to write a Fasion Blog?</div>
         <div className={form&&styles.formList}>
             <div className={styles.formBars}>
+                {message}
             <form onSubmit={handleSubmit}>
             <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title} placeholder="title" />
             <input type="text" onChange={(e)=>setEvent(e.target.value)} value={event} placeholder="event name" />
