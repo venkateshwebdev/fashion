@@ -23,13 +23,12 @@ export async function GET(req){
 export async function POST(req){
     await db.connect()
     const {title,event,mainCopy,image} = await req.json()
-    const data = await Blog.find()
     await Blog.create({
         address_business_name:title,
         event_name:event,
         headliner_copy:mainCopy,
         event_hero_url:image,
-        event_id:data.length
+        event_id:event
     }) 
     // console.log(title,event,image,heading)
     return new Response(JSON.stringify({title,event,mainCopy,image}),{status:200})
